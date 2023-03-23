@@ -1,6 +1,10 @@
 'use strict'
 
-import { contatos } from "./contatos.js"
+import { getContatosUser } from "./contatosAPI.js"
+const contatos = await getContatosUser(11966578996)
+// const contatos = await getContatosUser(11987876567)
+// const contatos = await getContatosUser(1194457796)
+// const contatos = await getContatosUser(11955577796)
 
 const criarContato = (contact) => {
     const contato = document.createElement('a')
@@ -153,4 +157,5 @@ const getIndex = (contact, lista) => {
 }
 
 carregarContatos()
+
 
